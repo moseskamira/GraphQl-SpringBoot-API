@@ -1,5 +1,7 @@
 package com.graphql.resolver;
 
+import java.util.Optional;
+
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import com.graphql.models.Author;
 import com.graphql.models.Book;
@@ -12,8 +14,8 @@ public class BookResolver implements GraphQLResolver<Book> {
         this.authorRepository = authorRepository;
     }
 
-    public Author getAuthor(Book book) {
-//        return authorRepository.findOne(book.getAuthor().getId());
-    	return null;
+    public Optional<Author> getAuthor(Book book) {
+        return authorRepository.findById(book.getAuthor().getId());
+    	
     }
 }
