@@ -1,4 +1,4 @@
-package com.graphql;
+package com.graphql.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.Data;
+
+@Data
 @Entity
 public class Book {
     @Id
@@ -14,17 +17,15 @@ public class Book {
     private Long id;
 
     private String title;
-
     private String isbn;
-
     private int pageCount;
 
     @ManyToOne
-    @JoinColumn(name = "author_id",
-            nullable = false, updatable = false)
+    @JoinColumn(name = "author_id", nullable = false, updatable = false)
     private Author author;
 
     public Book() {
+    	
     }
 
     public Book(String title, String isbn, int pageCount, Author author) {

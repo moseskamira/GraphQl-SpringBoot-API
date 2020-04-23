@@ -1,10 +1,14 @@
-package com.graphql;
+package com.graphql.resolvers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+import com.graphql.models.Author;
+import com.graphql.models.Book;
+import com.graphql.services.AuthorService;
+import com.graphql.services.BookService;
 
 @Component
 public class Query implements GraphQLQueryResolver {
