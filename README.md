@@ -24,11 +24,15 @@ This Project is intended to implement GraphQl in Spring Boot using Java.
 - Query: Similar to GET call in REST and used by the client to query the fields
 - Mutations: It is similar to a POST/PUT call in REST and is used by the client for any insert/update operation.
 
+##### Testing Hosted API
+- Link: https://graphql-api-spring-boot.herokuapp.com/graphiql
+
 ##### Testing API Locally
 - clone the repository at: https://github.com/moseskamira/GraphQl-SpringBoot-API.git
 - Open the project in your favorite IDE though I prefer using STS.
 - Run the maven Application
-- Load http://localhost:8080/graphiql in your favorite browser
+- Load http://localhost:8085/graphiql in your favorite browser
+- Remember the server is listening on port 8085
 
 ##### Screenshots:
 
