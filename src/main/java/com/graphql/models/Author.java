@@ -12,17 +12,17 @@ import lombok.Data;
 public class Author {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
+    Long author_id;
     
-    private String firstName;
-    private String lastName;
+    String firstName;
+    String lastName;
     
     public Author() {
     	
     }
 
     public Author(Long id) {
-        this.id = id;
+        this.author_id = id;
     }
 
     public Author(String firstName, String lastName) {
@@ -31,11 +31,11 @@ public class Author {
     }
 
     public Long getId() {
-        return id;
+        return author_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.author_id = id;
     }
 
     public String getFirstName() {
@@ -61,20 +61,19 @@ public class Author {
 
         Author author = (Author) o;
 
-        return id.equals(author.id);
+        return author_id.equals(author.author_id);
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return author_id.hashCode();
     }
 
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Author [author_id=" + author_id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+
+   
+    
 }
