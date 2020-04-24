@@ -5,7 +5,7 @@ schema {
 }
 
 type Author {
-  id: ID!
+  author_id: ID
   firstName: String!
   lastName: String!
 }
