@@ -20,7 +20,6 @@ public class BookService {
 	    book.setTitle(title);
 	    book.setIsbn(isbn);
 	    book.setPageCount(pageCount != null ? pageCount : 0);
-
 	    bookRepository.save(book);
 	    return book;
 	}
