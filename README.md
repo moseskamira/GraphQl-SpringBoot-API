@@ -40,6 +40,4 @@ This Project is intended to implement GraphQl in Spring Boot using Java.
 
 ![Query](/images/GraphQLTest.png)
 
-### Note:
-- API still under development
 
