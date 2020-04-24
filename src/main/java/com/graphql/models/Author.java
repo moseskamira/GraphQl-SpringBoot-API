@@ -5,9 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Data;
 
-@Data
 @Entity
 public class Author {
     @Id
@@ -21,8 +19,8 @@ public class Author {
     	
     }
 
-    public Author(Long id) {
-        this.author_id = id;
+    public Author(Long author_id) {
+        this.author_id = author_id;
     }
 
     public Author(String firstName, String lastName) {
@@ -34,8 +32,8 @@ public class Author {
         return author_id;
     }
 
-    public void setId(Long id) {
-        this.author_id = id;
+    public void setId(Long author_id) {
+        this.author_id = author_id;
     }
 
     public String getFirstName() {
@@ -58,9 +56,7 @@ public class Author {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Author author = (Author) o;
-
         return author_id.equals(author.author_id);
     }
 
@@ -74,6 +70,4 @@ public class Author {
 		return "Author [author_id=" + author_id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 
-   
-    
 }
